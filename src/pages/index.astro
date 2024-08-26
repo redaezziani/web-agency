@@ -5,16 +5,16 @@ import Counters from "../components/Counters.astro";
 import CardsSection from "../components/CardsSection.astro";
 import Promise from "../components/Promise.astro";
 import Pricing from "../components/Pricing.astro";
-
+import ContactForm from "../components/ContactForm.astro";
 ---
 
-<Layout
- title=" agency for building ."
->
+<Layout title=" agency for building .">
     <main
         class="w-full min-h-[70vh] overflow-hidden lg:min-h-[90vh] justify-start items-center flex flex-col relative"
     >
-        <div class="w-full h-[70vh] lg:min-h-[90vh] absolute left-0 top-0 -z-[1]">
+        <div
+            class="w-full h-[70vh] lg:min-h-[90vh] absolute left-0 top-0 -z-[1]"
+        >
             <Image
                 width={1920}
                 height={1080}
@@ -25,23 +25,22 @@ import Pricing from "../components/Pricing.astro";
             />
         </div>
         <span
-        class="w-full h-[70vh] lg:min-h-[90vh] absolute left-0 top-0 backdrop-blur-sm z-[1] bg-white/10"
+            class="w-full h-[70vh] lg:min-h-[90vh] absolute left-0 top-0 backdrop-blur-sm z-[1] bg-white/10"
         >
-
-        </span>        
+        </span>
         <div
             class="flex flex-col md:px-0 px-3 z-10 justify-start items-start gap-6 max-w-7xl mt-52"
         >
             <h2
-            id="hero-title"
-            class=" text-3xl lg:text-5xl text-white capitalize"
+                id="hero-title"
+                class="text-3xl lg:text-5xl text-white capitalize"
             >
                 Logiciels de Gestion Commerciale, Comptabilité et Bâtiment
                 Conformes aux Normes Marocaines
             </h2>
             <p
-            id="hero-description"
-            class=" text-slate-100 text-sm md:text-xl max-w-4xl"
+                id="hero-description"
+                class="text-slate-100 text-sm md:text-xl max-w-4xl"
             >
                 EBP Maroc, votre partenaire de confiance pour des logiciels : de
                 gestion commerciale, comptabilité et bâtiment, conformes aux
@@ -51,35 +50,107 @@ import Pricing from "../components/Pricing.astro";
             </p>
 
             <button
-            id="hero-button"
-            class="bg-primary group text-sm  hover:outline outline-primary/80 outline-offset-2  lg:text-base text-slate-100 px-6 py-3 flex gap-2 justify-center items-center rounded-full"
+                id="hero-button"
+                class="bg-primary group text-sm hover:outline outline-primary/80 outline-offset-2 lg:text-base text-slate-100 px-6 py-3 flex gap-2 justify-center items-center rounded-full"
             >
                 Découvrir nos solutions
 
                 <svg
-                class=" group-hover:ml-2 group-hover:-rotate-45 transition-all ease-in-out duration-500"
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"  fill="none">
-                    <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    class="group-hover:ml-2 group-hover:-rotate-45 transition-all ease-in-out duration-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="none"
+                >
+                    <path
+                        d="M20.0001 11.9998L4.00012 11.9998"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path
+                        d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
                 </svg>
             </button>
         </div>
     </main>
-    <Counters/>
-    <CardsSection/>
-    <Promise/>
-    <Pricing/>
+    <Counters />
+    <CardsSection />
+    <Promise />
+    <Pricing />
+
+    <div
+        class="w-full  bg-gray-50 border-b border-slate-300/25 flex justify-start flex-col items-center mt-10 min-h-[60rem]"
+    >
+        <span
+            class="w-full  px-3 lg:px-0 flex justify-start flex-col items-center  lg:min-h-[30rem] bg-primary"
+        >
+            <div
+                class="max-w-7xl min-h-[30rem] py-6 w-full flex-col justify-between flex items-start h-full text-white/90"
+            >
+                <p class="text-slate-100 text-sm md:text-xl max-w-4xl">
+                    Contact-nous
+                </p>
+                <h3 class="text-3xl lg:text-5xl capitalize max-w-4xl">
+                    Contactez-nous pour plus d'informations sur nos solutions de
+                    gestion
+                </h3>
+            </div>
+        </span>
+
+        <div class="w-full px-3 lg:px-0  max-w-7xl py-6 grid lg:grid-cols-2 gap-2 relative">
+            <div class="flex flex-col gap-3 justify-start items-start">
+                <p class="text-slate-500 text-sm">
+                    R agency est une entreprise spécialisée dans le
+                    développement de logiciels de gestion commerciale,
+                    comptabilité et bâtiment, conformes aux normes marocaines.
+                    Nos solutions innovantes et performantes vous permettent de
+                    simplifier et d’optimiser la gestion de votre entreprise, en
+                    vous offrant des outils intuitifs et faciles à utiliser.
+                </p>
+                <h4 class="relative mt-5 text-slate-400/35 text-sm w-full">
+                    <span
+                        class="text-3xl z-10 relative lg:text-5xl text-primary font-bold"
+                    >
+                        06 00 00 00 00
+                    </span>
+
+                    <span
+                        class="text-3xl z-0 absolute left-1 top-1 lg:text-5xl font-bold"
+                    >
+                        06 00 00 00 00
+                    </span>
+                </h4>
+
+                <h3 class="text-xl mt-5 text-secondary-second font-bold">
+                    Our Best Services:
+                </h3>
+            </div>
+
+            <section class="w-full col-span-1 relative">
+             <ContactForm />
+            </section>
+        </div>
+    </div>
 </Layout>
 
-<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+<script
+    defer
+    src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+></script>
 <script>
-import Alpine from 'alpinejs'
-// @ts-ignore
-import focus from '@alpinejs/focus'
-import intersect from '@alpinejs/intersect' 
- 
-Alpine.plugin(intersect)
-Alpine.plugin(focus)
+    import Alpine from "alpinejs";
+    // @ts-ignore
+    import focus from "@alpinejs/focus";
+    import intersect from "@alpinejs/intersect";
+
+    Alpine.plugin(intersect);
+    Alpine.plugin(focus);
     import gsap from "gsap";
 
     gsap.from("#hero-title", {
@@ -104,31 +175,26 @@ Alpine.plugin(focus)
     });
 </script>
 
-<style
-is:global
->
-@import '@fontsource-variable/onest';
+<style is:global>
+    @import "@fontsource-variable/onest";
 
-body {
-  font-family: 'Onest Variable', sans-serif;
-}
-::-webkit-scrollbar {
-    width: 8px;
-}
+    body {
+        font-family: "Onest Variable", sans-serif;
+    }
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
 
-::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 4px;
-}
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #f97316;
-}
+    ::-webkit-scrollbar-thumb:hover {
+        background: #f97316;
+    }
 </style>
-
-
-
