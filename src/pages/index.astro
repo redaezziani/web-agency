@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Counters from "../components/Counters.astro";
+import CardsSection from "../components/CardsSection.astro";
 
 ---
 
@@ -63,15 +64,7 @@ import Counters from "../components/Counters.astro";
         </div>
     </main>
     <Counters/>
-    <section
-    class=" px-3  relative h-96 bg-slate-900 flex-col w-full md:px-0 flex overflow-hidden justify-center items-center  mt-2"
-    >
-    <div class="grid grid-cols-3 ml-2  w-full h-full max-w-7xl gap-2">
-        <span class=" w-1  h-full border-l border-slate-700 border-dashed"></span>
-        <span class=" w-1 h-full border-r border-slate-700 border-dashed"></span>
-        <span class=" w-1 h-full border-l border-slate-700 border-dashed"></span>
-    </div>
-    </section>
+    <CardsSection/>
 </Layout>
 <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 <script>
@@ -112,8 +105,23 @@ is:global
 body {
   font-family: 'Onest Variable', sans-serif;
 }
+::-webkit-scrollbar {
+    width: 8px;
+}
 
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
 
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f97316;
+}
 </style>
+
 
 
