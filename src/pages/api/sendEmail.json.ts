@@ -20,7 +20,20 @@ export const POST: APIRoute = async ({ params, request }) => {
         from: "Acme <onboarding@resend.dev>",
         to: "klausdev2@gmail.com",
         subject: "Planifiez une consultation gratuite",
-        text:`Bonjour, je m'appelle ${firstName} ${lastName} et je travaille chez ${company}. Je suis intéressé par vos services et j'aimerais planifier une consultation gratuite. Voici mes coordonnées: Email: ${companyEmail} Téléphone: ${phoneNumber} Message: ${message}`
+        html: `
+            <html>
+                <body>
+                    <p>Bonjour, je m'appelle ${firstName} ${lastName} et je travaille chez ${company}.</p>
+                    <p>Je suis intéressé par vos services et j'aimerais planifier une consultation gratuite.</p>
+                    <p>Voici mes coordonnées:</p>
+                    <ul>
+                        <li>Email: ${companyEmail}</li>
+                        <li>Téléphone: ${phoneNumber}</li>
+                        <li>Message: ${message}</li>
+                    </ul>
+                </body>
+            </html>
+        `
     });
 
 
