@@ -3,11 +3,10 @@ import tailwind from "@astrojs/tailwind";
 import alpinejs from "@astrojs/alpinejs";
 import node from "@astrojs/node";
 
-import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), alpinejs(), react()],
+  integrations: [tailwind(), alpinejs()],
   output: "server",
   adapter: node({
     mode: "standalone"
